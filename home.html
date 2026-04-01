@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="CSS/headerhome.css">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+</head>
+
+<body>
+    <header>
+<div id="tutu">
+            <img id="logoxopi" src="imgs/logoxopi.png">
+            <span id="header-xhopii">Xhopii</span>
+        </div>
+        <a href="login.html" class="sair">Sair</a>
+    </header>
+  <nav class="navbar-menu">
+  <a href="home.html">Home</a>
+  <a href="#">Cadastro Cliente</a>
+  <a href="#">Cadastro Funcionário</a>
+  <a href="#">Cadastro Produto</a>
+  <a href="#">Ver Clientes</a>
+  <a href="#">Ver Funcionários</a>
+  <a href="#">Ver Produtos</a>
+</nav>
+
+<div class="carousel">
+  <button class="carousel-btn prev" onclick="moveSlide(-1)">&#8249;</button>
+
+  <div class="carousel-track" id="track">
+    <div class="slide"><img src="imgs/xhopii_1.png" /></div>
+    <div class="slide"><img src="imgs/xhopii_2.png" /></div>
+    <div class="slide"><img src="imgs/xhopii_3.png" /></div>
+  </div>
+   <button class="carousel-btn next" onclick="moveSlide(1)">&#8250;</button>
+
+  <div class="dots" id="dots"></div>
+</div>
+
+<img src="imgs/xhopii_4.png" class="promo-banner" />
+
+<div class="section-title">DESCOBERTAS DO DIA</div>
+<hr class="divider" />
+
+<div class="products-grid">
+  <a href="produto.html" class="product-card">
+    <img src="imgs/produto1.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+  <a href="produto.html" class="product-card">
+    <img src="imgs/produto2.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+  <a href="produto.html" class="product-card">
+    <img src="imgs/produto3.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+  <a href="produto.html" class="product-card">
+    <img src="imgs/produto4.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+  <a href="produto.html" class="product-card">
+    <img src="imgs/produto5.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+  <a href="produto.html" class="product-card">
+    <img src="imgs/produto1.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+  <a href="produto.html" class="product-card">
+    <img src="imgs/produto2.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+  <a href="produto.html" class="product-card">
+    <img src="imgs/produto3.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+  <a href="produto.html" class="product-card">
+    <img src="imgs/produto4.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+  <a href="produto.html" class="product-card">
+    <img src="imgs/produto5.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+</div>
+
+<script>
+  let current = 0;
+  const total = 3;
+  const track = document.getElementById('track');
+  const dotsContainer = document.getElementById('dots');
+
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement('span');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goTo(i);
+    dotsContainer.appendChild(d);
+  }
+
+  function goTo(i) {
+    current = (i + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.dot').forEach((d, j) =>
+      d.classList.toggle('active', j === current)
+    );
+  }
+
+  function moveSlide(dir) { goTo(current + dir); }
+  setInterval(() => moveSlide(1), 4000);
+</script>
+
+    <footer>
+        <div class="footer-sections">
+            <section>
+                <h3>ATENDIMENTO AO CLIENTE</h3>
+                Central de Ajuda<br>
+                Como Comprar<br>
+                Métodos de Paramento<br>
+                Garantia Xhopii<br>
+                Devolução e Reembolso<br>
+                Fale Conosco<br>
+                Ouvidoria<br><br>
+            </section>
+            <section>
+                <h3>SOBRE A XHOPII</h3>
+                Sobre Nós<br>
+                Políticas Xhopii<br>
+                Política de Privacidade<br>
+                Programa de Afiliados da Xhopii<br>
+                Seja um Entregador Xhopii<br>
+                Ofertas Relâmpago<br>
+                Xhopii Blog<br>
+                Imprensa
+            </section>
+            <section>
+                <h3>PAGAMENTO</h3>
+                <img id="imgp" src="imgs/logo_pagamentos.png">
+            </section>
+            <section>
+                <h3>SIGA-NOS</h3>
+                <ul class="social-links">
+                    <li><i class="fa-brands fa-instagram"></i> Instagram</li>
+                    <li><i class="fa-brands fa-twitter"></i> Twitter</li>
+                    <li><i class="fa-brands fa-facebook"></i> Facebook</li>
+                    <li><i class="fa-brands fa-youtube"></i> YouTube</li>
+                    <li><i class="fa-brands fa-linkedin"></i> LinkedIn</li>
+                </ul>
+            </section>
+            <section>
+                <h3>ATENDIMENTO AO CLIENTE</h3>
+                <img id="imgqr" src="imgs/qrcode.png"><br>
+                <img id="lplay" src="imgs/logosplays.png">
+
+            </section>
+        </div>
+        <div id="copyright" class="copyright">
+            © 2023 Xhopi. Todos os direitos acadêmicos reservados
+        </div>
+    </footer>
+</body>
+
+</html>

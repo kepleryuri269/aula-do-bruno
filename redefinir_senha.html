@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redefinir Senha</title>
-    <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/redefinir_senha.css">
+    <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -16,22 +16,17 @@
         <div id="header-left">
             <img id="logoxopi" src="imgs/logoxopi.png">
             <span id="header-xhopii">Xhopii</span>
-            <span id="header-entre">Entre</span>
-        </div>
-        <div id="header-right">
-            <a href="#" id="header-ajuda">Precisa de ajuda?</a>
         </div>
     </header>
 
-    <main id="redef-area">
-        <div id="redef-card">
-            <a href="login.html" id="redef-voltar">&#8592;</a>
-            <h2 id="redef-title">Redefinir senha</h2>
-
-            <form id="redef-form">
-                <input class="login-input" type="email" placeholder="Email">
-                <button type="submit" id="btn-enviar">ENVIAR</button>
-            </form>
+    <main class="page">
+        <div class="card">
+            <button class="back-btn">&larr;</button>
+            <h2 class="card-title">Redefinir sua senha</h2>
+              <form action="home.html">
+    <input type="email" class="email-input" placeholder="Email" required>
+    <button type="submit" class="submit-btn">ENVIAR</button>
+</form>
         </div>
     </main>
 

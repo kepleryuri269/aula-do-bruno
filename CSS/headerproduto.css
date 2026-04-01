@@ -1,0 +1,47 @@
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #FB5630;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 16px;
+    box-sizing: border-box;
+}
+
+#logoxopi {
+    height: 60px;
+    width: auto;
+}
+
+#header-xhopii {
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: left;
+}
+
+#tutu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.navbar-menu {
+    font-family: Arial, Helvetica, sans-serif;
+  background-color: #00000036;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 10px 0;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #FB5630;
+  font-size: 18px;
+}
+
+.navbar-menu a:hover {
+  color: #f05a3a;
+}
+

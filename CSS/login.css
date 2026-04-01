@@ -1,7 +1,8 @@
-body{
+body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 #login-area {
     width: 100%;
     min-height: calc(100vh - 60px);
@@ -29,7 +30,6 @@ body{
     margin: 0 0 28px 0;
 }
 
-/* ===== FORM ===== */
 #login-form {
     display: flex;
     flex-direction: column;
@@ -53,12 +53,12 @@ body{
     border-color: #e8450a;
 }
 
-#btn-entre {
+#btn-entre, .submit-btn {
     width: 100%;
     height: 46px;
-    background-color: #e8450a;
+    background-color: #FB5630;
     color: #fff;
-    border: none;
+    border: 1px solid #000000;
     border-radius: 4px;
     font-size: 15px;
     font-weight: 700;
@@ -68,11 +68,10 @@ body{
     margin-top: 4px;
 }
 
-#btn-entre:hover {
-    background-color: #cf3d08;
+#btn-entre:hover, .submit-btn:hover {
+    background-color: #e8450a;
 }
 
-/* ===== LINKS ===== */
 #login-links {
     display: flex;
     justify-content: space-between;
@@ -89,7 +88,6 @@ body{
     text-decoration: underline;
 }
 
-/* ===== DIVISOR OU ===== */
 #login-ou {
     display: flex;
     align-items: center;
@@ -108,7 +106,6 @@ body{
     color: #888;
 }
 
-/* ===== BOTÕES SOCIAIS ===== */
 #login-sociais {
     display: flex;
     gap: 10px;
@@ -135,7 +132,6 @@ body{
     background-color: #f5f5f5;
 }
 
-/* ===== RODAPÉ DO CARD ===== */
 #login-cadastro {
     text-align: center;
     font-size: 13px;
@@ -153,70 +149,3 @@ body{
     text-decoration: underline;
 }
 
-/* ===== REDEFINIR SENHA ===== */
-#redef-area {
-    width: 100%;
-    min-height: calc(100vh - 60px);
-    background-color: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 0;
-    box-sizing: border-box;
-}
-
-#redef-card {
-    background-color: #fff;
-    width: 480px;
-    border-radius: 8px;
-    padding: 32px 40px 40px;
-    box-sizing: border-box;
-    position: relative;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-}
-
-#redef-voltar {
-    position: absolute;
-    top: 22px;
-    left: 22px;
-    font-size: 20px;
-    color: #333;
-    text-decoration: none;
-    line-height: 1;
-}
-
-#redef-voltar:hover {
-    color: #e8450a;
-}
-
-#redef-title {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    color: #333;
-    margin: 0 0 28px 0;
-}
-
-#redef-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-#btn-enviar {
-    width: 100%;
-    height: 46px;
-    background-color: #e8450a;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-#btn-enviar:hover {
-    background-color: #cf3d08;
-}

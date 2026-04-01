@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Produto</title>
+    <link rel="stylesheet" href="CSS/headerproduto.css">
+    <link rel="stylesheet" href="CSS/interface_produto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="tutu">
+            <img id="logoxopi" src="imgs/logoxopi.png">
+            <span id="header-xhopii">Xhopii</span>
+        </div>
+    </header>
+  <nav class="navbar-menu">
+  <a href="#">Home</a>
+  <a href="#">Cadastro Cliente</a>
+  <a href="#">Cadastro Funcionário</a>
+  <a href="#">Cadastro Produto</a>
+  <a href="#">Ver Clientes</a>
+  <a href="#">Ver Funcionários</a>
+  <a href="#">Ver Produtos</a>
+</nav>
+
+<div class="produto">
+
+  <div class="thumbnails">
+    <img src="imgs/produto1.png" class="thumb" />
+    <img src="imgs/produto2.png" class="thumb" />
+    <img src="imgs/produto3.png" class="thumb" />
+    <img src="imgs/produto4.png" class="thumb" />
+    <img src="imgs/produto5.png" class="thumb" />
+  </div>
+
+  <img src="imgs/produto1.png" id="mainImg" class="main-image" />
+
+  <div class="nomes">
+    <h1>Camisa Desenvolvedor Front-End CSS</h1>
+    <p class="price">R$56,90</p>
+    <p class="stock">171 peças disponíveis</p>
+
+    <p class="label">Modelos:</p>
+    <div class="options">
+      <label><input type="radio" name="modelo" /><span>Preto</span></label>
+      <label><input type="radio" name="modelo" /><span>Azul</span></label>
+      <label><input type="radio" name="modelo" /><span>Verde</span></label>
+      <label><input type="radio" name="modelo" /><span>Cinza</span></label>
+      <label><input type="radio" name="modelo" /><span>Rosa</span></label>
+    </div>
+
+    <p class="label">Tamanhos:</p>
+    <div class="options">
+      <label><input type="radio" id="p" name="tamanho" checked /><span>P</span></label>
+      <label><input type="radio" id="m" name="tamanho" /><span>M</span></label>
+      <label><input type="radio" id="g" name="tamanho" /><span>G</span></label>
+      <label><input type="radio" id="gg" name="tamanho" /><span>GG</span></label>
+    </div>
+     <p class="selected-size">
+      Tamanho Selecionado:
+      <span class="sz" id="sz-p">P</span>
+      <span class="sz" id="sz-m">M</span>
+      <span class="sz" id="sz-g">G</span>
+      <span class="sz" id="sz-gg">GG</span>
+    </p>
+
+    <button class="buy-btn">Comprar Agora</button>
+  </div>
+
+</div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const sizeSpans = document.querySelectorAll('.sz');
+        const sizeRadios = document.querySelectorAll('input[name="tamanho"]');
+        
+        function updateSelectedSize() {
+          sizeSpans.forEach(span => span.style.display = 'none');
+          const selected = document.querySelector('input[name="tamanho"]:checked');
+          if (selected) {
+            const szId = 'sz-' + selected.id;
+            const szSpan = document.getElementById(szId);
+            if (szSpan) szSpan.style.display = 'inline';
+          }
+        }
+        
+        sizeRadios.forEach(radio => radio.addEventListener('change', updateSelectedSize));
+        updateSelectedSize(); // Initial
+      });
+    </script>
+</body>
+
+</html>

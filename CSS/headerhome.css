@@ -1,0 +1,68 @@
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #FB5630;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 16px;
+    box-sizing: border-box;
+    position: relative; /* For absolute button */
+}
+
+#logoxopi {
+    height: 60px;
+    width: auto;
+}
+
+#header-xhopii {
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: left;
+}
+
+#tutu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sair {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    background-color: #FB5630;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(251,86,48,0.3);
+}
+
+.navbar-menu {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FB7730;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 16px 0;
+    height: 70px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: lab(100% 0.01 -0.01);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-menu a:hover {
+    color: #ffffff;
+}
+
