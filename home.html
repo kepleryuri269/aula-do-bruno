@@ -19,7 +19,7 @@
         </div>
         <a href="login.html" class="sair">Sair</a>
     </header>
-  <nav class="navbar-menu">
+  <nav class="nav_letra">
   <a href="home.html">Home</a>
   <a href="#">Cadastro Cliente</a>
   <a href="#">Cadastro Funcionário</a>
@@ -42,96 +42,103 @@
   <div class="dots" id="dots"></div>
 </div>
 
-<img src="imgs/xhopii_4.png" class="promo-banner" />
+<img src="imgs/xhopii_4.png" class="banerzin" />
 
 <div class="section-title">DESCOBERTAS DO DIA</div>
 <hr class="divider" />
 
 <div class="products-grid">
-  <a href="produto.html" class="product-card">
+  <a href="interface_produto.html" class="product-card">
     <img src="imgs/produto1.png" />
     <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
     <span class="prod-price">R$ 59,90</span>
     <span class="prod-stock">171 disponíveis</span>
   </a>
-  <a href="produto.html" class="product-card">
-    <img src="imgs/produto2.png" />
-    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
-    <span class="prod-price">R$ 59,90</span>
-    <span class="prod-stock">171 disponíveis</span>
-  </a>
-  <a href="produto.html" class="product-card">
-    <img src="imgs/produto3.png" />
-    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
-    <span class="prod-price">R$ 59,90</span>
-    <span class="prod-stock">171 disponíveis</span>
-  </a>
-  <a href="produto.html" class="product-card">
-    <img src="imgs/produto4.png" />
-    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
-    <span class="prod-price">R$ 59,90</span>
-    <span class="prod-stock">171 disponíveis</span>
-  </a>
-  <a href="produto.html" class="product-card">
-    <img src="imgs/produto5.png" />
-    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
-    <span class="prod-price">R$ 59,90</span>
-    <span class="prod-stock">171 disponíveis</span>
-  </a>
-  <a href="produto.html" class="product-card">
+  <a href="interface_produto.html" class="product-card">
     <img src="imgs/produto1.png" />
     <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
     <span class="prod-price">R$ 59,90</span>
     <span class="prod-stock">171 disponíveis</span>
   </a>
-  <a href="produto.html" class="product-card">
-    <img src="imgs/produto2.png" />
+  <a href="interface_produto.html" class="product-card">
+    <img src="imgs/produto1.png" />
     <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
     <span class="prod-price">R$ 59,90</span>
     <span class="prod-stock">171 disponíveis</span>
   </a>
-  <a href="produto.html" class="product-card">
-    <img src="imgs/produto3.png" />
+  <a href="interface_produto.html" class="product-card">
+    <img src="imgs/produto1.png" />
     <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
     <span class="prod-price">R$ 59,90</span>
     <span class="prod-stock">171 disponíveis</span>
   </a>
-  <a href="produto.html" class="product-card">
-    <img src="imgs/produto4.png" />
+  <a href="interface_produto.html" class="product-card">
+    <img src="imgs/produto1.png" />
     <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
     <span class="prod-price">R$ 59,90</span>
     <span class="prod-stock">171 disponíveis</span>
   </a>
-  <a href="produto.html" class="product-card">
-    <img src="imgs/produto5.png" />
+  <a href="interface_produto.html" class="product-card">
+    <img src="imgs/produto1.png" />
     <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
     <span class="prod-price">R$ 59,90</span>
     <span class="prod-stock">171 disponíveis</span>
   </a>
-</div>
+  <a href="interface_produto.html" class="product-card">
+    <img src="imgs/produto1.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+  <a href="interface_produto.html" class="product-card">
+    <img src="imgs/produto1.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+  <a href="interface_produto.html" class="product-card">
+    <img src="imgs/produto1.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+  <a href="interface_produto.html" class="product-card">
+    <img src="imgs/produto1.png" />
+    <p class="prod-name">Camisa Desenvolvedor Front-End CSS</p>
+    <span class="prod-price">R$ 59,90</span>
+    <span class="prod-stock">171 disponíveis</span>
+  </a>
+</div>    
 
 <script>
   let current = 0;
-  const total = 3;
   const track = document.getElementById('track');
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
   const dotsContainer = document.getElementById('dots');
 
-  for (let i = 0; i < total; i++) {
+  // Criar dots automaticamente
+  slides.forEach((_, i) => {
     const d = document.createElement('span');
     d.className = 'dot' + (i === 0 ? ' active' : '');
     d.onclick = () => goTo(i);
     dotsContainer.appendChild(d);
-  }
+  });
 
   function goTo(i) {
     current = (i + total) % total;
     track.style.transform = `translateX(-${current * 100}%)`;
-    document.querySelectorAll('.dot').forEach((d, j) =>
-      d.classList.toggle('active', j === current)
-    );
+
+    document.querySelectorAll('.dot').forEach((d, j) => {
+      d.classList.toggle('active', j === current);
+    });
   }
 
-  function moveSlide(dir) { goTo(current + dir); }
+  function moveSlide(dir) {
+    goTo(current + dir);
+  }
+
+  // autoplay
   setInterval(() => moveSlide(1), 4000);
 </script>
 
