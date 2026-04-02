@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Xhopii - Cadastrar Funcionarios</title>
-    <link rel="stylesheet" href="Funcionario_style.css"/>
+  <title>Xhopii - Cadastrar Produto</title>
+    <link rel="stylesheet" href="cadastrar_produto_style.css"/>
 </head>
 <body>
   <header>
     <a class="header-logo" href="#">
-      <img src="imgs/logo.png" alt="Xhopii Logo" style="width:36px; height:36px; object-fit:contain;"/>
+      <img src="img/logo.png" alt="Xhopii Logo" style="width:36px; height:36px; object-fit:contain;"/>
       <span class="logo-text">Xhopii</span>
     </a>
     <a class="header-sair" href="#">Sair</a>
   </header>
   <nav>
-    <a href="home.html">Home</a>
+    <a href="#">Home</a>
     <a href="cliente.html">Cadastro Cliente</a>
     <a href="Funcionario.html">Cadastro Funcionário</a>
     <a href="produto.html">Cadastro Produto</a>
@@ -25,36 +25,26 @@
   </nav>
   <main>
     <div class="card">
-      <h2 class="card-title">Cadastrar Funcionario</h2>
+      <h2 class="card-title">Cadastrar Produto</h2>
 
       <div class="form-group">
         <input class="form-input" type="text" placeholder="Nome" />
       </div>
       <div class="form-group">
-        <input class="form-input" type="text" placeholder="Sobrenome" />
+        <input class="form-input" type="text" placeholder="Fabricante" />
       </div>
       <div class="form-group">
-        <input class="form-input" type="text" placeholder="CPF" />
+        <input class="form-input" type="text" placeholder="Descrição" />
       </div>
       <div class="form-group">
-        <input class="form-input" type="date" />
+        <input class="form-input" type="tel" placeholder="Valor"/>
       </div>
       <div class="form-group">
         <input class="form-input" type="tel" placeholder="Telefone" />
       </div>
       <div class="form-group">
-        <input class="form-input" type="text" placeholder="Cargo/Função" />
+        <input class="form-input" type="text" placeholder="Quantidade" />
       </div>
-      <div class="form-group">
-        <input class="form-input" type="text" placeholder="Salario" />
-      </div>
-      <div class="form-group">
-        <input class="form-input" type="email" placeholder="Email" />
-      </div>
-      <div class="form-group">
-        <input class="form-input" type="password" placeholder="Senha" />
-      </div>
-
       <label class="foto-label">Selecionar foto de perfil:</label>
       <div class="foto-row">
         <button class="btn-escolher" onclick="document.getElementById('file-input').click()">
