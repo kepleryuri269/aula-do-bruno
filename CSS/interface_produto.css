@@ -1,38 +1,40 @@
-body{
+body {
     margin: 0;
-font-family: Arial, Helvetica, sans-serif; }
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .produto {
-  display: flex;
-  gap: 24px;
-  padding: 40px;
-  max-width: 900px;
-  margin: 0 auto;
-  align-items: flex-start;
+    display: flex;
+    gap: 24px;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: flex-start;
 }
 
 .thumbnails {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
+
 .thumb {
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
-  border: 2px solid transparent;
-  border-radius: 4px;
-  cursor: pointer;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .thumb:hover { border-color: #f05a3a; }
 
 .main-image {
-  width: 280px;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 6px;
+    width: 280px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 6px;
 }
 
 .nomes { flex: 1; }
@@ -46,42 +48,45 @@ h1 { font-size: 25px; margin-bottom: 8px; }
 .label { font-size: 14px; font-weight: 600; margin: 16px 0 8px; }
 
 .options {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0;      /* section tem margin padrão do navegador — zeramos */
+    padding: 0;     /* section tem padding padrão do navegador — zeramos */
 }
 
 .options input[type="radio"] { display: none; }
 
 .options span {
-  display: inline-block;
-  padding: 6px 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
 }
 
 .options span:hover { border-color: #f05a3a; }
 
 .options input[type="radio"]:checked + span {
-  border-color: #f05a3a;
-  background: #fff3f0;
+    border-color: #f05a3a;
+    background: #fff3f0;
 }
 
 .buy-btn {
-  margin-top: 24px;
-  padding: 12px 28px;
-  background: #f05a3a;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s;
+    margin-top: 24px;
+    padding: 12px 28px;
+    background: #f05a3a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
 }
+
 .sz { display: none; }
 
 #p:checked ~ p #sz-p,

@@ -12,85 +12,87 @@
 
 <body>
     <header>
-        <div id="tutu">
+        <section id="tutu">
             <img id="logoxopi" src="imgs/logoxopi.png">
             <span id="header-xhopii">Xhopii</span>
-        </div>
+        </section>  <!-- era </div> — bug corrigido -->
     </header>
-  <nav class="navbar-menu">
-  <a href="home.html">Home</a>
-  <a href="cliente.html">Cadastro Cliente</a>
-  <a href="Funcionario.html">Cadastro Funcionário</a>
-  <a href="cadastrar_produto.html">Cadastro Produto</a>
-  <a href="#">Ver Clientes</a>
-  <a href="#">Ver Funcionários</a>
-  <a href="#">Ver Produtos</a>
-</nav>
 
-<div class="produto">
+    <nav class="navbar-menu">
+        <a href="home.html">Home</a>
+        <a href="cliente.html">Cadastro Cliente</a>
+        <a href="Funcionario.html">Cadastro Funcionário</a>
+        <a href="cadastrar_produto.html">Cadastro Produto</a>
+        <a href="#">Ver Clientes</a>
+        <a href="#">Ver Funcionários</a>
+        <a href="#">Ver Produtos</a>
+    </nav>
 
-  <div class="thumbnails">
-    <img src="imgs/produto1.png" class="thumb" />
-    <img src="imgs/produto2.png" class="thumb" />
-    <img src="imgs/produto3.png" class="thumb" />
-    <img src="imgs/produto4.png" class="thumb" />
-    <img src="imgs/produto5.png" class="thumb" />
-  </div>
+    <section class="produto">
 
-  <img src="imgs/produto1.png" id="mainImg" class="main-image" />
+        <section class="thumbnails">
+            <img src="imgs/produto1.png" class="thumb" />
+            <img src="imgs/produto2.png" class="thumb" />
+            <img src="imgs/produto3.png" class="thumb" />
+            <img src="imgs/produto4.png" class="thumb" />
+            <img src="imgs/produto5.png" class="thumb" />
+        </section>
 
-  <div class="nomes">
-    <h1>Camisa Desenvolvedor Front-End CSS</h1>
-    <p class="price">R$56,90</p>
-    <p class="stock">171 peças disponíveis</p>
+        <img src="imgs/produto1.png" id="mainImg" class="main-image" />
 
-    <p class="label">Modelos:</p>
-    <div class="options">
-      <label><input type="radio" name="modelo" /><span>Preto</span></label>
-      <label><input type="radio" name="modelo" /><span>Azul</span></label>
-      <label><input type="radio" name="modelo" /><span>Verde</span></label>
-      <label><input type="radio" name="modelo" /><span>Cinza</span></label>
-      <label><input type="radio" name="modelo" /><span>Rosa</span></label>
-    </div>
+        <section class="nomes">
+            <h1>Camisa Desenvolvedor Front-End CSS</h1>
+            <p class="price">R$56,90</p>
+            <p class="stock">171 peças disponíveis</p>
 
-    <p class="label">Tamanhos:</p>
-    <div class="options">
-      <label><input type="radio" id="p" name="tamanho" checked /><span>P</span></label>
-      <label><input type="radio" id="m" name="tamanho" /><span>M</span></label>
-      <label><input type="radio" id="g" name="tamanho" /><span>G</span></label>
-      <label><input type="radio" id="gg" name="tamanho" /><span>GG</span></label>
-    </div>
-     <p class="selected-size">
-      Tamanho Selecionado:
-      <span class="sz" id="sz-p">P</span>
-      <span class="sz" id="sz-m">M</span>
-      <span class="sz" id="sz-g">G</span>
-      <span class="sz" id="sz-gg">GG</span>
-    </p>
+            <p class="label">Modelos:</p>
+            <section class="options">
+                <label><input type="radio" name="modelo" /><span>Preto</span></label>
+                <label><input type="radio" name="modelo" /><span>Azul</span></label>
+                <label><input type="radio" name="modelo" /><span>Verde</span></label>
+                <label><input type="radio" name="modelo" /><span>Cinza</span></label>
+                <label><input type="radio" name="modelo" /><span>Rosa</span></label>
+            </section>
 
-    <button class="buy-btn">Comprar Agora</button>
-  </div>
+            <p class="label">Tamanhos:</p>
+            <section class="options">
+                <label><input type="radio" id="p" name="tamanho" checked /><span>P</span></label>
+                <label><input type="radio" id="m" name="tamanho" /><span>M</span></label>
+                <label><input type="radio" id="g" name="tamanho" /><span>G</span></label>
+                <label><input type="radio" id="gg" name="tamanho" /><span>GG</span></label>
+            </section>
 
-</div>
+            <p class="selected-size">
+                Tamanho Selecionado:
+                <span class="sz" id="sz-p">P</span>
+                <span class="sz" id="sz-m">M</span>
+                <span class="sz" id="sz-g">G</span>
+                <span class="sz" id="sz-gg">GG</span>
+            </p>
+
+            <button class="buy-btn">Comprar Agora</button>
+        </section>
+
+    </section>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const sizeSpans = document.querySelectorAll('.sz');
-        const sizeRadios = document.querySelectorAll('input[name="tamanho"]');
-        
-        function updateSelectedSize() {
-          sizeSpans.forEach(span => span.style.display = 'none');
-          const selected = document.querySelector('input[name="tamanho"]:checked');
-          if (selected) {
-            const szId = 'sz-' + selected.id;
-            const szSpan = document.getElementById(szId);
-            if (szSpan) szSpan.style.display = 'inline';
-          }
-        }
-        
-        sizeRadios.forEach(radio => radio.addEventListener('change', updateSelectedSize));
-        updateSelectedSize(); // Initial
-      });
+        document.addEventListener('DOMContentLoaded', function () {
+            const sizeSpans = document.querySelectorAll('.sz');
+            const sizeRadios = document.querySelectorAll('input[name="tamanho"]');
+
+            function updateSelectedSize() {
+                sizeSpans.forEach(span => span.style.display = 'none');
+                const selected = document.querySelector('input[name="tamanho"]:checked');
+                if (selected) {
+                    const szId = 'sz-' + selected.id;
+                    const szSpan = document.getElementById(szId);
+                    if (szSpan) szSpan.style.display = 'inline';
+                }
+            }
+
+            sizeRadios.forEach(radio => radio.addEventListener('change', updateSelectedSize));
+            updateSelectedSize();
+        });
     </script>
 </body>
 
