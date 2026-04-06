@@ -9,6 +9,9 @@ header {
     box-sizing: border-box;
     border-bottom: 1px solid #e0e0e0;
 }
+#hehe{
+    height: 70px;
+}
 
 #header-left {
     display: flex;
